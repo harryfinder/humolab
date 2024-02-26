@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-// YearsToJubilee вычисляет, сколько лет осталось до юбилея пользователя.
 func YearsToJubilee() {
 	var age int
 	fmt.Println("Введите ваш возраст:")

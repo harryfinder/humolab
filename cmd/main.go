@@ -130,7 +130,6 @@ func main() {
 			homework7.SplitSliceIntoEvenOdd(numbers)
 		case 3:
 			fmt.Println("Бонусное задание: 'Дурная больница' для нескольких клиентов.")
-			// Создание списка пациентов
 			patients := []homework6.Patient{
 				{Name: "Никодим", Age: 25},
 				{Name: "Илюха", Age: 30},

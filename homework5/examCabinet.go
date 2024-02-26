@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-// ConductExam теперь включает вызов PrepareStudents внутри себя.
 func ConductExam() {
 	students := PrepareStudents() // Вызов PrepareStudents прямо здесь
 

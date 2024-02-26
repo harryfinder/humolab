@@ -2,7 +2,6 @@ package homework2
 
 import "fmt"
 
-// AreaRectangle находит площадь прямоугольника. Пользователь вводит длины сторон.
 func AreaRectangle() {
 	var length, width float64
 	fmt.Println("Введите длину и ширину прямоугольника:")
