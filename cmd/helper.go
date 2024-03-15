@@ -6,6 +6,7 @@ import (
 	"humo/homework1"
 	"humo/homework11"
 	"humo/homework13"
+	"humo/homework14"
 	"humo/homework2"
 	"humo/homework3"
 	"humo/homework4"
@@ -36,6 +37,9 @@ func main() {
 		fmt.Println("- 6 День. Дурная больница(использрвание указатели(pointer)")
 		fmt.Println("- 7 День. Продвинутая работа с коллекциями: Манипуляции с массивами и слайсами.")
 		fmt.Println("- 8-9 День. Хеш-таблицы и мапы")
+		fmt.Println("- 11 День. Работа со строками")
+		fmt.Println("- 13 День. Методы и интерфейсы")
+		fmt.Println("- 14 День. Работа с файлами")
 
 		input, _ := reader.ReadString('\n')
 		day, _ := strconv.Atoi(strings.TrimSpace(input))
@@ -157,6 +161,25 @@ func main() {
 		case 13:
 			wallet := &homework13.Wallet{Balance: 500}
 			homework13.ExecuteQRInterfaceOperations(reader, wallet)
+		case 14:
+			fmt.Println("Добро пожаловать в 14-й день! Работа с файлами.")
+			fmt.Println("Выберите задание:")
+			fmt.Println("1 - Записать сообщение в файл")
+			fmt.Println("2 - Прочитать сообщение из файла")
+
+			taskInput, _ := reader.ReadString('\n')
+			task, _ := strconv.Atoi(strings.TrimSpace(taskInput))
+
+			switch task {
+			case 1:
+				fmt.Println("Введите сообщение для записи в файл:")
+				message, _ := reader.ReadString('\n')
+				homework14.WriteMessageToFile("message.txt", strings.TrimSpace(message))
+			case 2:
+				homework14.ReadMessageFromFile("message.txt")
+			default:
+				fmt.Println("Неверный выбор задания.")
+			}
 		default:
 			fmt.Println("Такого дня обучения нет или задания на этот день ещё не добавлены.")
 		}
